@@ -49,10 +49,4 @@ class Authors extends \yii\db\ActiveRecord {
         }
         return isset($result) ? $result : [];
     }
-    
-    public static function getNameById($id){
-        $result = Authors::findOne(['id' => $id]);
-        return $result['firstname'].' '.$result['lastname'];
-    }
-
 }
